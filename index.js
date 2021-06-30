@@ -11,6 +11,11 @@ const tutorials = [
   'what is JSONP?'
 ];
 
-const titleCased = () => {
-  return tutorials
+
+function titleCased() {
+  const titleCasedTutorials = tutorials.map(title => title.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' '));
+  return titleCasedTutorials;
 }
+
+
+//How do we account for words like "OO", "API" , "JSONP", and "PreventDefault"?
