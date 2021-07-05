@@ -12,10 +12,35 @@ const tutorials = [
 ];
 
 
-function titleCased() {
-  const titleCasedTutorials = tutorials.map(title => title.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' '));
-  return titleCasedTutorials;
+// function titleCased() {
+//   const titleCasedTutorials = tutorials.map(title => 
+//     title.split(' ').map(word => 
+//     word.charAt(0).toUpperCase() + word.slice(1)).join(' '));
+//   return titleCasedTutorials;
+// }
+
+
+// function titleCased() {
+//   const newTutorials = tutorials.map(book => 
+//      book.split(' ').map(word => 
+//     word.charAt(0).toUpperCase() + word.slice(1)).join(' '));
+
+//   return newTutorials;
+
+// }
+
+
+
+
+
+
+
+
+//practice 7/5
+
+function titleCased(){
+  let newArr = tutorials.map(element => 
+    element.split(' ').map(word => 
+      word[0].toUpperCase() + word.slice(1)).join(' '));
+  return newArr;
 }
-
-
-//How do we account for words like "OO", "API" , "JSONP", and "PreventDefault"?
